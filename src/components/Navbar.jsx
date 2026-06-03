@@ -11,8 +11,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const closeMenu = () => setOpen(false);
-
   return (
     <header
       className={`
@@ -78,7 +76,7 @@ const Navbar = () => {
         <div
           className={`
     md:hidden overflow-hidden transition-all duration-500
-    ${open ? "max-h-[500px] mt-4" : "max-h-0"}
+    ${open ? "max-h-125 mt-4" : "max-h-0"}
   `}
         >
           <div className="bg-black/40 border border-white/10 rounded-2xl p-4 space-y-2">

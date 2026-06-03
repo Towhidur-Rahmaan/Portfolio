@@ -149,7 +149,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="/resume.pdf"
+            href="/Towhidur_Rahman_CV.pdf"
             className="
               px-8
               py-4
@@ -169,7 +169,7 @@ const Hero = () => {
         {/* Social Links */}
         <div className="flex gap-5 text-2xl mt-10">
           <a
-            href="https://github.com/YOUR_GITHUB"
+            href="https://github.com/Towhidur-Rahmaan"
             target="_blank"
             rel="noreferrer"
             className="hover:text-blue-400 transition"
@@ -178,7 +178,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/YOUR_LINKEDIN"
+            href="https://www.linkedin.com/in/towhidur-rahman-83b4aa15a/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-blue-400 transition"
