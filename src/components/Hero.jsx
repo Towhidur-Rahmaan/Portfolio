@@ -8,6 +8,15 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden pt-24"
     >
+      <div
+        className="
+    absolute
+    inset-0
+    bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)]
+    bg-size-[80px_80px]
+    opacity-20
+  "
+      />
       {/* Glow Background */}
       <div className="absolute top-20 left-10 h-96 w-96 rounded-full bg-blue-500/20 blur-[140px]" />
 
@@ -126,117 +135,157 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="flex flex-wrap gap-4 mt-10"
+          className="flex flex-wrap gap-5 mt-12"
         >
           <a
             href="#projects"
             className="
-              flex
-              items-center
-              gap-3
-              px-8
-              py-4
-              rounded-full
-              bg-white
-              text-black
-              font-semibold
-              hover:scale-105
-              transition
-            "
+      group
+      relative
+      overflow-hidden
+      flex
+      items-center
+      gap-3
+      px-8
+      py-4
+      rounded-2xl
+      bg-gradient-to-r
+      from-cyan-500
+      via-blue-500
+      to-purple-500
+      font-semibold
+      transition-all
+      duration-300
+      hover:scale-105
+      hover:shadow-[0_0_40px_rgba(59,130,246,0.35)]
+    "
           >
-            View Projects
-            <FaArrowRight />
+            <span className="relative z-10">View Projects</span>
+
+            <FaArrowRight
+              className="
+        relative
+        z-10
+        group-hover:translate-x-1
+        transition
+      "
+            />
           </a>
 
           <a
             href="/Towhidur_Rahman_CV.pdf"
+            target="_blank"
+            rel="noreferrer"
             className="
-              px-8
-              py-4
-              rounded-full
-              border
-              border-white/10
-              bg-white/5
-              backdrop-blur-xl
-              hover:bg-white/10
-              transition
-            "
+      flex
+      items-center
+      gap-3
+      px-8
+      py-4
+      rounded-2xl
+      bg-white/5
+      backdrop-blur-xl
+      border
+      border-white/10
+      hover:border-cyan-400/40
+      hover:bg-white/10
+      transition-all
+      duration-300
+    "
           >
-            Download Resume
+            Resume
           </a>
         </motion.div>
 
         {/* Social Links */}
-        <div className="flex gap-5 text-2xl mt-10">
+        <div className="flex items-center gap-4 mt-12">
           <a
             href="https://github.com/Towhidur-Rahmaan"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-blue-400 transition"
+            className="
+      group
+      relative
+      h-14
+      w-14
+      rounded-2xl
+      bg-white/5
+      backdrop-blur-xl
+      border
+      border-white/10
+      flex
+      items-center
+      justify-center
+      transition-all
+      duration-300
+      hover:-translate-y-2
+      hover:border-cyan-400/50
+      hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]
+    "
           >
-            <FaGithub />
+            <FaGithub className="text-xl group-hover:scale-110 transition" />
           </a>
 
           <a
             href="https://www.linkedin.com/in/towhidur-rahman-83b4aa15a/"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-blue-400 transition"
+            className="
+      group
+      relative
+      h-14
+      w-14
+      rounded-2xl
+      bg-white/5
+      backdrop-blur-xl
+      border
+      border-white/10
+      flex
+      items-center
+      justify-center
+      transition-all
+      duration-300
+      hover:-translate-y-2
+      hover:border-blue-500/50
+      hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]
+    "
           >
-            <FaLinkedin />
+            <FaLinkedin className="text-xl group-hover:scale-110 transition" />
           </a>
+
+          <div className="h-8 w-px bg-white/10 mx-2" />
+
+          <span className="text-gray-500 text-sm tracking-wider">
+            AVAILABLE FOR WORK
+          </span>
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-3 gap-4 md:gap-6 mt-20 max-w-3xl">
-          <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-6">
+          <div
+            className="group
+bg-white/3
+hover:bg-white/6
+hover:-translate-y-2
+
+transition-all
+duration-500 border border-white/10 backdrop-blur-xl rounded-3xl p-6"
+          >
             <h3 className="text-4xl font-bold">4+</h3>
             <p className="text-gray-400">Projects</p>
           </div>
 
-          <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-6">
+          <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-6 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]">
             <h3 className="text-4xl font-bold">1</h3>
             <p className="text-gray-400">Internship</p>
           </div>
 
-          <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-6">
+          <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-6 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]">
             <h3 className="text-4xl font-bold">1+</h3>
             <p className="text-gray-400">Client Project</p>
           </div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 1.5,
-        }}
-        className="
-    absolute
-    bottom-8
-    left-1/2
-    -translate-x-1/2
-    z-50
-    transition-all
-    duration-500
-    hidden lg:block
-  "
-      >
-        <p
-          className="
-      text-xs
-      tracking-[0.3em]
-      uppercase
-      text-gray-500
-    "
-        >
-          Scroll
-        </p>
-      </motion.div>
     </section>
   );
 };

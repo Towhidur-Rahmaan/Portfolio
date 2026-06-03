@@ -47,7 +47,7 @@ const Contact = () => {
             <br />
             <span
               className="
-                bg-gradient-to-r
+                bg-linear-to-r
                 from-cyan-400
                 via-blue-500
                 to-purple-500
